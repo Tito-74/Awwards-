@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def awards(request):
-    return render(request, 'awards/award.html')
+    return render(request, 'awards/awards.html')
 
 def review(request):
     return render(request, 'awards/review.html')
