@@ -2,3 +2,12 @@ h2
 {
   color: green;
 }
+.logout{
+    display: flex;
+    font-size: 16px;
+}
+
+.logout a{
+    text-decoration: none;
+    color: aliceblue;
+}
