@@ -5,7 +5,7 @@ def awards(request):
     return render(request, 'awards/awards.html')
 
 def review(request):
-    return render(request, 'awards/review.html')
+    return render(request, 'awards/reviews.html')
 
 def addproject(request):
     return render(request, 'awards/add.html')
