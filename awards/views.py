@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Review, Profile, Post
 
 # Create your views here.
 def awards(request):

@@ -60,7 +60,7 @@ class Review(models.Model):
     comment = models.TextField(max_length = 250)
     date_rated = models.DateTimeField(auto_now_add = True)
 
-     def __str__(self):
+    def __str__(self):
         return self.post.title
 
 
