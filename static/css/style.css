@@ -108,6 +108,33 @@ small{
   padding: 1rem;
 
 }
+.user-votes img{
+  width: 55px;
+  height: 50px;
+  border: 1px solid rgb(195, 236, 195);
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.user-votes #user{
+  display: flex;
+}
+.review-vote #result{
+  display: flex;
+  flex-direction: row;
+  float: right;
+
+}
+.review-vote #result p{
+  margin-top: 1rem;
+
+}
+.review-vote #result small{
+  margin-left: 2rem;
+  font-size: 24px;
+  border-radius: 50%;
+  border: 2px solid rgb(236, 245, 236);
+  padding: 10px;
+}
 
 
 
