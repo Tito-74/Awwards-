@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 h2
 {
   color: green;
@@ -11,3 +17,48 @@ h2
     text-decoration: none;
     color: aliceblue;
 }
+/* awards */
+.jumbotron img{
+  height: 90vh;
+  object-fit: cover;
+}
+.header{
+  margin-top: 5rem;
+}
+small{
+  font-size: 24px;
+  border-radius: 50%;
+  border: 2px solid rgb(236, 245, 236);
+  padding: 10px;
+
+}
+.review{
+  display: flex;
+  text-align: center;
+
+}
+.Creativity,.result, .Design,.Usability{
+  margin: 2rem;
+  font-size: 24px;
+
+}
+.Creativity p{
+  margin-top: 1rem;
+}
+.Design p{
+  margin-top: 1rem;
+
+}
+.Usability p{
+  margin-top: 1rem;
+
+}
+.result p{
+  margin-top: 1rem;
+
+}
+
+
+
+
+/* end */

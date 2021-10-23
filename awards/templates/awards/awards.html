@@ -1,5 +1,60 @@
 {%extends 'awards/base.html' %}
+{% load static %}
 {% block content%}
 {{block.super}}
-<h2>awards</h2>
+<div class="jumbotron">
+    <!-- <img src="{% static 'images/bg1.jpg'%}" class="card-img" alt="..."> -->
+    <div class="card bg-dark text-white">
+        <img src="{% static 'images/bg1.jpg'%}" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <div class="text-center header">
+                <h3>Gallery app for the new 2020</h3>
+                <p>by Tito from Bomet</p>
+            </div>
+            <div class="review justify-content-center">
+                <div class="result">
+                    <small>
+                        7.5
+                    </small>
+                    <p>Points</p>
+                </div>
+                <div class="Design">
+                    <small>
+                        7.5
+                    </small>
+                    <p>Design</p>
+                </div>
+                <div class="Usability ">
+                    <small>
+                        7.5
+                    </small>
+                    <p>Usability </p>
+                </div>
+                <div class="Creativity ">
+                    <small>
+                        7.5
+                    </small>
+                    <p>Creativity</p>
+    
+                </div>
+
+            </div>
+        </div>
+      </div>
+</div>
+
+<div class="container">
+    <h5 class="text-center">
+        Sites In The Dashboard
+    </h5>
+
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+    </div>
+    
+
+</div>
+
 {% endblock %}
