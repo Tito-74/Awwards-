@@ -1,0 +1,30 @@
+{%extends 'awards/base.html' %}
+{% load static%}
+{% block content%}
+{{block.super}}
+<body>
+    <div class="container">
+        <div class="vote-content">
+            <form action="">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Design</label><br>
+                    <input type="range" id="points" name="points" min="0" max="10">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Usability</label><br>
+                    <input type="range" id="points" name="points" min="0" max="10">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Creativity</label><br>
+                    <input type="range" id="points" name="points" min="0" max="10">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Add Comment</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                  </div>
+                  <input type="submit">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
