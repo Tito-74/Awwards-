@@ -87,11 +87,13 @@ small{
     padding-left: 2rem;
 
 }
-.projectImage button{
-  padding: 2rem;
-
+.details #title{
+  margin: 2rem;
 }
 
+.details span{
+  margin: 2rem;
+}
 
 
 
