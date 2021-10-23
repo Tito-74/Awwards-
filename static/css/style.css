@@ -58,14 +58,41 @@ small{
 
 }
 
-.overview{
+.overview, .view{
   display: flex;
 }
 .overview span{
   margin-left: 3rem;
 }
-
-
-
-
 /* end */
+
+/* Review */
+
+.content{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  /* max-width: 70%; */
+  /* margin: 3rem; */
+}
+.projectImage{
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.projectImage img{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+}
+.projectImage button{
+  padding: 2rem;
+
+}
+
+
+
+
+/* end  */

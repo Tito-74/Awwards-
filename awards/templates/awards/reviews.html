@@ -1,5 +1,18 @@
 {%extends 'awards/base.html' %}
+{% load static%}
 {% block content%}
 {{block.super}}
-<h2>reviews</h2>
+<div class="container">
+    <h6>Tito From Bomet</h6>
+    <div class="content mr-4 mt-2 ml-4 mb-2">
+        <div class="projectImage">
+            <img src="{% static 'images/bg2.jpg'%}" class="card-img-top" alt="...">
+            
+        </div>
+        <button class="btn btn-info btn-lg col-12 mx-auto"> Vote Now</button>
+        <div class="details">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
