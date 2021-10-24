@@ -23,7 +23,7 @@ class Profile(models.Model):
    
 
 class Post(models.Model):
-    user = models.ForeignKey(Profile,on_delete=models.CASCADE, null = True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null = True)
     title = models.CharField(max_length = 100)
     project_image = CloudinaryField('images')
     desc = models.TextField(max_length = 250)

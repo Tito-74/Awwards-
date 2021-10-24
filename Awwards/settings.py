@@ -52,7 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'awards.apps.AwardsConfig',
-    'cloudinary'
+    'cloudinary',
+    'bootstrap3',
+    'account'
+
 ]
 
 MIDDLEWARE = [

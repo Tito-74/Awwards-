@@ -149,3 +149,17 @@ small{
 
 
 /* end */
+
+/* navbar */
+nav ul li{
+  list-style: none;
+  margin: 1rem;
+  
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+
+}
+
+/* end */
