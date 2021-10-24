@@ -3,7 +3,9 @@ from .models import Review, Profile, Post
 
 # Create your views here.
 def awards(request):
-    return render(request, 'awards/awards.html')
+    posts = Post.objects.all()
+    context = {'posts':posts}
+    return render(request, 'awards/awards.html', context)
 
 def review(request):
     return render(request, 'awards/reviews.html')

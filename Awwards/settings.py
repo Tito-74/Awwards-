@@ -12,6 +12,20 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+
+cloudinary.config( 
+  cloud_name = "dwofopsjd", 
+  api_key = "711236216548118", 
+  api_secret = "HV-nka5FpTRi1N5QSJm80hOT38U" 
+)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,7 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'awards.apps.AwardsConfig'
+    'awards.apps.AwardsConfig',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -63,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
