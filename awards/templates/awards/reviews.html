@@ -5,7 +5,6 @@
 {{block.super}}
 <div class="container">
     <a class="btn btn-lg btn-secondary" href="{url 'awards'}">Go Back</a>
-    <h6 class="name mt-5">Tito From Bomet</h6>
     <div class="content mr-4 mt-2 ml-4 mb-2">
         <div class="projectImage">
             <img src="{{project.project_image.url}}" class="card-img-top" alt="...">
@@ -50,49 +49,6 @@
 
             </div>
             <div class="container">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <h3 class="text-center">Scores</h3>
-                    <div class="col-md-12">
-                        <div class="col-md-3" id="c">
-                            <span class="sc">Average</span>
-                        </div>
-                        <div class="col-md-2" id="c">
-                            <span class="sc">Design</span>
-                        </div>
-                        <div class="col-md-2" id="c">
-                            <span class="sc">Usability</span>
-                        </div>
-                        <div class="col-md-2" id="c">
-                            <span class="sc">Content</span>
-                        </div>
-                        <div class="col-md-3" id="c">
-                            <span class="sc">Rated by:{{project.user.username}}</span>
-                        </div>
-                    </div>
-                    {% for reviews in reviews %}
-                    <div class="col-md-12">
-                        {% if post.id == review.post.id %}
-                        <div class="col-md-3" id="c">
-                            <span class="sc">{{ reviews.average  }}</span>
-                        </div>
-                        <div class="col-md-2">
-                            <span class="sc">{{ reviews.design }}</span>
-                        </div>
-                        <div class="col-md-2" id="u">
-                            <span class="sc">{{ reviews.usability }}</span>
-                        </div>
-                        <div class="col-md-2" id="c">
-                            <span class="sc">{{ reviews.content }}</span>
-                        </div>
-                        <div class="col-md-3" id="c">
-                            <span class="sc">{{ reviews.user.username }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                    <div class="col-md-2"></div>
-                </div>
                 <table style="width:100%">
                     <tr>
                     <th>Voters</th>
