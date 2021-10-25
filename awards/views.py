@@ -78,3 +78,17 @@ def addproject(request):
 def search(request):
     return render(request, 'awards/search.html')
 
+
+class ProfileList(APIView):
+    def get(self, request, format=None):
+        profiles = Profile.objects.all()
+        serializer = ProfileSerializer(profiles, many=True)
+        return Response(serializer.data)
+
+
+class PostList(APIView):
+    def get(self, request, format=None):
+        projects = Post.objects.all()
+        serializer = ProjectSerializer(projects, many=True)
+        return Response(serializer.data)
+
