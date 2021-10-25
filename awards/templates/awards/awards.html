@@ -61,7 +61,11 @@
                     </div>
                     <div class="view justify-content-between">
                         <h5>_ by {{post.user}}</h5>
+                        {% if user.is_authenticated %}
                         <a class="btn btn-info" href="{% url 'review' post.id %}">Review</a>
+                        {% else %}
+                        <h5>Login to Review</h5>
+                        {% endif %}
                     </div>
                 </div>
               </div>
