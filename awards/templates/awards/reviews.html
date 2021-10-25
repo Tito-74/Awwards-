@@ -100,13 +100,17 @@
                       <th>Creativity</th>
                       <th>Points</th>
                     </tr>
+                    {% for reviews in reviews %}
                     <tr>
-                      <td>john</td>
-                      <td>6</td>
-                      <td>8</td>
-                      <td>9</td>
-                      <td>7</td>
+                        {% if post.id == review.post.id %}
+                      <td>reviews.user.username</td>
+                      <td>{{ reviews.design }}</td>
+                      <td>{{ reviews.usability }}</td>
+                      <td>{{ reviews.content }}</td>
+                      <td>reviews.average </td>
+                      {% endif %}
                     </tr>
+                    {% endfor %}
                 </table>
             
 
