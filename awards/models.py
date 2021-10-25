@@ -53,7 +53,7 @@ class Post(models.Model):
 
 
 class Review(models.Model):
-    user = models.ForeignKey(Profile,on_delete=models.CASCADE, null = True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE, null = True)
     post = models.ForeignKey(Post,on_delete=models.CASCADE, null = True)
     design = models.IntegerField(default = 0, blank = False)
     usability = models.IntegerField(default = 0, blank = False)

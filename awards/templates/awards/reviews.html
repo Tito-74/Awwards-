@@ -1,25 +1,24 @@
 {%extends 'awards/base.html' %}
 {% load static%}
+{% load bootstrap3 %}
 {% block content%}
 {{block.super}}
 <div class="container">
     <h6 class="name mt-5">Tito From Bomet</h6>
     <div class="content mr-4 mt-2 ml-4 mb-2">
         <div class="projectImage">
-            <img src="{% static 'images/bg2.jpg'%}" class="card-img-top" alt="...">
+            <img src="{{project.project_image.url}}" class="card-img-top" alt="...">
             
         </div>
         <button class="btn btn-info btn-lg col-12 mx-auto"> Vote Now</button>
         <div class="details mt-5">
             <div id="title">
-                <h4>Gallery App</h4>
+                <h4>{{project.title}} </h4>
                 <p>
                     by Tito
                 </p>
             </div>
-            <span class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            <span class="text-center">{{ project.description  }}
             </span>
         </div>
 
@@ -29,50 +28,64 @@
                 <hr>
 
             </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="mt-4">Review Rate</h2>
+                    {% if rating_status %}
+                    <h5>Already done your review</h5>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <button class="btn btn-sm btn-info btn-block" style="margin-top:4px;" value="review" type="submit">Rate</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                </div>
+
+            </div>
             <div id="user-vote">
                 <div class="row">
                     <div class="col-md-6">
                         <div id="user">
                             <img src="{% static 'images/user2.jpg'%}" alt="">
-                            <strong>Zajno from United States<br> Tito.com</strong>
+                            <strong>{{project.user.username}}<br> Tito.com</strong>
 
                         </div>
                     </div>
+                    {% for review in reviews %}
                     <div class="col-md-6">
                         <div class="review-vote justify-content-center">
-                            <div id="result">
+                            {% if post.id == review.post.id %}
+                            <div class="col-md-3" id="c">
+                                <span class="sc">{{ review.average  }}</span>
+                            </div>
+                            <div class="col-md-2">
+                                <span class="sc">{{ review.design }}</span>
+                            </div>
+                            <div class="col-md-2" id="u">
+                                <span class="sc">{{ review.usability }}</span>
+                            </div>
+                            <div class="col-md-2" id="c">
+                                <span class="sc">{{ review.content }}</span>
+                            </div>
+                            <div class="col-md-3" id="c">
+                                <span class="sc">{{ review.user.username }}</span>
+                            </div>
+                            {% endif %}
+                            <!-- <div id="result">
                                 <p>
                                     Points
                                 </p>
                                 <small>
                                     7.5
                                 </small>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
-                    <hr>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="user">
-                            <img src="{% static 'images/user2.jpg'%}" alt="">
-                            <strong>Zajno from United States<br> Tito.com</strong>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="review-vote justify-content-center">
-                            <div id="result">
-                                <p>
-                                    Points
-                                </p>
-                                <small>
-                                    7.5
-                                </small>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    
                     <hr>
                 </div>
                
@@ -85,3 +98,5 @@
     </div>
 </div>
 {% endblock %}
+
+

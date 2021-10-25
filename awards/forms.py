@@ -12,19 +12,11 @@ class PostForm(forms.ModelForm):
         template_name = "add.html"
 
         fields = "__all__"
+
+
+
+class RatingsForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['design', 'usability', 'creativity', 'comment']
         
-# exclude = ['user', 'profile', 'date']
-
-
-# class UpdateUserForm(forms.ModelForm):
-#     email = forms.EmailField(max_length=254, help_text='Required.')
-
-#     class Meta:
-#         model = Profile
-#         fields = ('username', 'email')
-
-
-# class UpdateProfileForm(forms.ModelForm):
-#     class Meta:
-#         model = Profile
-#         fields = ['contact','profile_pic', 'bio']
