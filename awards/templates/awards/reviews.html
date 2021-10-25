@@ -4,6 +4,7 @@
 {% block content%}
 {{block.super}}
 <div class="container">
+    <a class="btn btn-lg btn-secondary" href="{url 'awards'}">Go Back</a>
     <h6 class="name mt-5">Tito From Bomet</h6>
     <div class="content mr-4 mt-2 ml-4 mb-2">
         <div class="projectImage">
@@ -103,7 +104,7 @@
                     {% for reviews in reviews %}
                     <tr>
                         {% if post.id == review.post.id %}
-                      <td>reviews.user.username</td>
+                      <td>{{reviews.user.username}}</td>
                       <td>{{ reviews.design }}</td>
                       <td>{{ reviews.usability }}</td>
                       <td>{{ reviews.creativity }}</td>
