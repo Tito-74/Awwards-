@@ -15,7 +15,7 @@
             <div id="title">
                 <h4>{{project.title}} </h4>
                 <p>
-                    by {{project.profile.name}}
+                    by {{project.user}}
                 </p><br>
                 <p>
                     {{project.desc}}
@@ -92,45 +92,22 @@
                     {% endfor %}
                     <div class="col-md-2"></div>
                 </div>
-            <!-- <div id="user-vote">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="user">
-                            <img src="{% static 'images/user2.jpg'%}" alt="">
-                            <strong>{{project.user.username}}<br> Tito</strong>
-
-                        </div>
-                    </div>
-                    {% for review in reviews %}
-                    <div class="col-md-6">
-                        <div class="review-vote justify-content-center">
-                            {% if post.id == review.post.id %}
-                            <div class="col-md-3" id="c">
-                                <span class="sc">{{ review.average  }}</span>
-                            </div>
-                            <div class="col-md-2">
-                                <span class="sc">{{ review.design }}</span>
-                            </div>
-                            <div class="col-md-2" id="u">
-                                <span class="sc">{{ review.usability }}</span>
-                            </div>
-                            <div class="col-md-2" id="c">
-                                <span class="sc">{{ review.content }}</span>
-                            </div>
-                            <div class="col-md-3" id="c">
-                                <span class="sc">{{ review.user.username }}</span>
-                            </div>
-                            {% endif %}
-                            
-                        </div>
-                    </div>
-                    {% endfor %}
-                    
-                    <hr>
-                </div>
-               
-
-            </div> -->
+                <table style="width:100%">
+                    <tr>
+                    <th>Voters</th>
+                      <th>Design</th>
+                      <th>Usability</th>
+                      <th>Creativity</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>john</td>
+                      <td>6</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>7</td>
+                    </tr>
+                </table>
             
 
         </div>
