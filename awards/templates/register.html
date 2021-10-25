@@ -9,7 +9,7 @@
     <script src='main.js'></script>
     <style>
         center{
-            padding: 5rem;
+            margin: 5rem;
             }
             input{
                 margin-top: 1rem;
@@ -21,6 +21,7 @@
     </style>
 </head>
 <body>
+   <center>
     <form action="register" method="post">
         {% csrf_token %}
 
@@ -33,6 +34,7 @@
         <input type="Submit">
 
     </form>
+   </center>
 
     <div>
         {% for message in messages %}
