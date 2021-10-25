@@ -10,8 +10,8 @@ urlpatterns = [
     path('review/(?P<id>\d+)/', views.review, name='review'),
     path('add/', views.addproject, name='add'),
     path('search/', views.search, name='search'),
-    url('api/v1/profile',views.ProfileList.as_view(),name='profileEndpoint'),
-    url('api/v1/post',views.ProjectList.as_view(),name='postEndpoint')
+    path('api/v1/profile',views.ProfileList.as_view(),name='profileEndpoint'),
+    path('api/v1/post',views.PostList.as_view(),name='postEndpoint')
     
 ]
 if settings.DEBUG:

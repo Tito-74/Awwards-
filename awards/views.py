@@ -8,6 +8,12 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.urls import reverse
 
+from .serializer import ProfileSerializer, PostSerializer
+from django.http import Http404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
 
 
 # Create your views here.
@@ -89,6 +95,6 @@ class ProfileList(APIView):
 class PostList(APIView):
     def get(self, request, format=None):
         projects = Post.objects.all()
-        serializer = ProjectSerializer(projects, many=True)
+        serializer = PostSerializer(projects, many=True)
         return Response(serializer.data)
 
