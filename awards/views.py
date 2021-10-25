@@ -32,14 +32,14 @@ def review(request, id):
         if form.is_valid():
             design = form.cleaned_data['design']
             usability = form.cleaned_data['usability']
-            content = form.cleaned_data['creativity']
+            creativity = form.cleaned_data['creativity']
             comment = form.cleaned_data['comment']
             review = Review()
             review.post = project
             review.user = current_user
             review.design = design
             review.usability = usability
-            # review.creativity = creativity
+            review.creativity = creativity
             review.comment = comment
             review.average = (
             review.design + review.usability + review.creativity)/3

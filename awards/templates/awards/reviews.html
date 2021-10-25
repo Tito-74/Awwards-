@@ -26,9 +26,8 @@
             <div id="header">
                 <h4>User Votes</h4>
                 <hr>
-
             </div>
-            <div class="row">
+             <div class="row">
                 <div class="col-md-4">
                     <h2 class="mt-4">Review Rate</h2>
                     {% if rating_status %}
@@ -45,12 +44,56 @@
                 </div>
 
             </div>
-            <div id="user-vote">
+            <div class="container">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h3 class="text-center">Scores</h3>
+                    <div class="col-md-12">
+                        <div class="col-md-3" id="c">
+                            <span class="sc">Average</span>
+                        </div>
+                        <div class="col-md-2" id="c">
+                            <span class="sc">Design</span>
+                        </div>
+                        <div class="col-md-2" id="c">
+                            <span class="sc">Usability</span>
+                        </div>
+                        <div class="col-md-2" id="c">
+                            <span class="sc">Content</span>
+                        </div>
+                        <div class="col-md-3" id="c">
+                            <span class="sc">Rated by:{{project.user.username}}</span>
+                        </div>
+                    </div>
+                    {% for reviews in reviews %}
+                    <div class="col-md-12">
+                        {% if post.id == review.post.id %}
+                        <div class="col-md-3" id="c">
+                            <span class="sc">{{ reviews.average  }}</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="sc">{{ reviews.design }}</span>
+                        </div>
+                        <div class="col-md-2" id="u">
+                            <span class="sc">{{ reviews.usability }}</span>
+                        </div>
+                        <div class="col-md-2" id="c">
+                            <span class="sc">{{ reviews.content }}</span>
+                        </div>
+                        <div class="col-md-3" id="c">
+                            <span class="sc">{{ reviews.user.username }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <div class="col-md-2"></div>
+                </div>
+            <!-- <div id="user-vote">
                 <div class="row">
                     <div class="col-md-6">
                         <div id="user">
                             <img src="{% static 'images/user2.jpg'%}" alt="">
-                            <strong>{{project.user.username}}<br> Tito.com</strong>
+                            <strong>{{project.user.username}}<br> Tito</strong>
 
                         </div>
                     </div>
@@ -74,14 +117,7 @@
                                 <span class="sc">{{ review.user.username }}</span>
                             </div>
                             {% endif %}
-                            <!-- <div id="result">
-                                <p>
-                                    Points
-                                </p>
-                                <small>
-                                    7.5
-                                </small>
-                            </div> -->
+                            
                         </div>
                     </div>
                     {% endfor %}
@@ -90,7 +126,7 @@
                 </div>
                
 
-            </div>
+            </div> -->
             
 
         </div>

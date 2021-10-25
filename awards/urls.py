@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.awards, name='awards'),
-    path('review/<int:id>/', views.review, name='review'),
+    path('review/(?P<id>\d+)/', views.review, name='review'),
     path('add/', views.addproject, name='add'),
     path('search/', views.search, name='search'),
     
